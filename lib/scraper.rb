@@ -2,6 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 require_relative "../lib/student.rb"
+
 class Scraper
 
   def self.scrape_index_page(index_url)
