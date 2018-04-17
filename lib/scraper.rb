@@ -31,8 +31,6 @@ class Scraper
         attributes[:linkedin]=url
       elsif url =~ /github/
         attributes[:github]=url
-      elsif url =~ /youtube/
-        attributes[:youtube]=url
       end
     end
     attributes
