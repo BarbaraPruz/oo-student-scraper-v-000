@@ -29,11 +29,11 @@ puts "scrape profile #{profile_url}"
       if url =~ /twitter/
         attributes[:twitter]=url
       elsif url =~ /linkedin/
-        attributes[:linkedin]=url      
+        attributes[:linkedin]=url
       elsif url =~ /github/
-        attributes[:github]=url  
+        attributes[:github]=url
       elsif url =~ /youtube/
-        attributes[:youtube]=url  
+        attributes[:youtube]=url
       end
     end
     puts "#{attributes}"
