@@ -18,22 +18,23 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    attributes_hash.each do | key, val |
-      case key
-      when :bio
-          @bio = val
-        when :profile_quote
-          @profile_quote = val
-        when :blog
-          @blog = val
-        when :github
-          @github = val
-        when :linkedin
-          @linkedin = val
-        when :twitter
-          @twitter = val
-      end
-    end
+    attributes_hash.each { |key, value| instance_variable_set("@#{key}", value) }
+    # attributes_hash.each do | key, val |
+    #   case key
+    #   when :bio
+    #       @bio = val
+    #     when :profile_quote
+    #       @profile_quote = val
+    #     when :blog
+    #       @blog = val
+    #     when :github
+    #       @github = val
+    #     when :linkedin
+    #       @linkedin = val
+    #     when :twitter
+    #       @twitter = val
+    #   end
+    # end
   end
 
   def self.all
