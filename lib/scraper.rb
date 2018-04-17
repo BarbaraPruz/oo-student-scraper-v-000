@@ -28,4 +28,4 @@ end
 BASE_PATH = "./fixtures/student-site/"
 slist = Scraper.scrape_index_page(BASE_PATH + 'index.html')
 Student.create_from_collection(slist)
-Student.all.each { | student | { puts "#{student.name} #{student.location} #{student.profile_url}"}
+Student.all.each { | s | { puts "#{s.name} #{s.location} #{s.profile_url}"}
