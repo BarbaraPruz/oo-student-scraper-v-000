@@ -21,23 +21,22 @@ class Student
     attributes_hash.each do | key, val |
       case key
         when "bio"
-          @bio = val 
+          @bio = val
         when "profile_quote"
           @profile_quote = val
         when "blog"
-          @blog = val          
+          @blog = val
         when "github"
-          @github = val          
+          @github = val
         when "linkedin"
-          @linkedin = val        
+          @linkedin = val
         when "twitter"
-          @twitter = val    
-      end    
+          @twitter = val
+      end
+    end
   end
 
   def self.all
     @@all
   end
 end
-
-
