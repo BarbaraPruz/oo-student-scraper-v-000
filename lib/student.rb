@@ -34,7 +34,6 @@ class Student
           @twitter = val
       end
     end
-    binding.pry
   end
 
   def self.all
