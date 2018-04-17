@@ -25,7 +25,7 @@ class Student
         when :profile_quote
           @profile_quote = val
         when :blog
-          @blog = vale
+          @blog = val
         when :github
           @github = val
         when :linkedin
