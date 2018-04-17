@@ -20,7 +20,7 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     attributes = []
-
+puts "scrape profile #{profile_url}"
     page = Nokogiri::HTML(open(index_url))
     binding.pry
     # page.css('.profile-quote')
