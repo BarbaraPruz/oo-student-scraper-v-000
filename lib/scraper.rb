@@ -31,6 +31,14 @@ class Scraper
         attributes[:linkedin]=url
       elsif url =~ /github/
         attributes[:github]=url
+      # spec doesn't care about youtube and facebook but we'll 
+      # handle those so they aren't mistaken for blog
+      elsif url =~ /facebook/
+        attributes[:facebook]=url
+      elsif url =~ /youtube/
+        attributes[:youtube]=url      
+      else
+        attributes[:blog]=url
       end
     end
     attributes
