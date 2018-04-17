@@ -24,12 +24,19 @@ puts "scrape profile #{profile_url}"
     page = Nokogiri::HTML(open(profile_url))
     attributes[:profile] = page.css(".profile-quote").text
     attributes[:bio] = page.css(".description-holder p").text
-    page.css(".social-icon-container a").each {| anchor |
+    page.css(".social-icon-container a").each do | anchor |
       url = anchor.attribute("href").text
-          binding.pry
-        }
-    # page.css('.social-icon-container')
-
+      if url =~ /twitter/
+        attributes[:twitter]=url
+      elsif url =~ /linkedin/
+        attributes[:linkedin]=url      
+      elsif url =~ /github/
+        attributes[:github]=url  
+      elsif url =~ /youtube/
+        attributes[:youtube]=url  
+      end
+    end
+    puts "#{attributes}"
     attributes
   end
 
